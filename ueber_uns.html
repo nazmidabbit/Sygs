@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #667eea;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .info-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .info-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .contact-info {
+            font-size: 1.1em;
+            color: #666;
+            margin: 10px 0;
+        }
+        .arabic-text {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            direction: rtl;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Über uns</h1>
+    </header>
+    <main>
+        <div class="info-section">
+            <h2>Über uns / معلومات عنا</h2>
+            <p class="contact-info">
+                Eine Gemeinschaft, die syrische Familien und Einzelpersonen im Saarland zusammenbringt.
+            </p>
+            <p class="arabic-text">
+                مجتمع يجمع العائلات والأفراد السوريين في مقاطعة زارلاند.
+            </p>
+        </div>
+        <section>
+            <h2>Unsere Geschichte</h2>
+            <p>Hier können Sie Informationen über unsere Geschichte und Mission hinzufügen.</p>
+        </section>
+        <section>
+            <h2>Unser Team</h2>
+            <p>Hier können Sie Informationen über Ihr Team hinzufügen.</p>
+        </section>
+        <section>
+            <h2>Kontakt</h2>
+            <p>Hier können Sie Kontaktinformationen hinzufügen.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="buttons">
+            <button onclick="window.open('https://www.facebook.com', '_blank')">Facebook</button>
+            <button onclick="window.open('https://www.instagram.com', '_blank')">Instagram</button>
+            <button onclick="window.open('https://wa.me/', '_blank')">WhatsApp</button>
+            <button onclick="window.location.href='mailto:info@example.com'">E-Mail</button>
+        </div>
+        <p>&copy; 2026 Ihr Unternehmen</p>
+    </footer>
+</body>
+</html>
