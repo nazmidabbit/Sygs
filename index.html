@@ -349,11 +349,20 @@
         .hero {
             margin-top: 200px; /* Adjust for fixed header and ticker */
         }
+
+        .animated-logo {
+            animation: floatLogo 2.5s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-18px); }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="images/Logo.jpg" alt="Logo der Syrischen Gemeinschaft" class="logo">
+        <img src="images/Logo.jpg" alt="Logo der Syrischen Gemeinschaft" class="logo animated-logo">
         <nav>
             <a href="#home">Start</a>
             <a href="ueber_uns.html">Über uns</a>
@@ -371,7 +380,6 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <img src="images/Logo.jpg" alt="Logo der Syrischen Gemeinschaft" class="hero-logo">
             <h1>Syrische Gemeinschaft im Saarland</h1>
             <p>Herzlich willkommen bei der Syrischen Gemeinschaft im Saarland!</p>
         </div>

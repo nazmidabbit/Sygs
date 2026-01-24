@@ -34,6 +34,13 @@
             margin-bottom: 10px;
             filter: drop-shadow(0 4px 16px #0002);
         }
+        .animated-logo {
+            animation: floatLogo 2.5s ease-in-out infinite;
+        }
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-18px); }
+        }
         main {
             padding: 40px 20px 20px 20px;
             max-width: 900px;
@@ -124,7 +131,7 @@
 </head>
 <body>
     <header>
-        <img src="images/Logo.jpg" alt="Logo" class="header-logo">
+        <img src="images/Logo.jpg" alt="Logo" class="header-logo animated-logo">
         <h1>Über uns</h1>
     </header>
     <main>
