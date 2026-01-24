@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syrische Gemeinschaft im Saarland</title>
+    <title>تجمع السوريين في زارلاند</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -56,7 +56,7 @@
         }
 
         nav a {
-            color: #667eea;
+            color: #2E7D32;
             text-decoration: none;
             margin: 0 20px;
             padding: 10px 20px;
@@ -72,7 +72,42 @@
             box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
         }
 
+        .news-ticker {
+            background: linear-gradient(90deg, #2E7D32, #000000);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            top: 140px;
+            width: 100%;
+            z-index: 999;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 1.2em;
+        }
+
+        .news-ticker .ticker-content {
+            display: flex;
+            white-space: nowrap;
+            animation: scrollRTL 15s linear infinite;
+        }
+
+        .news-ticker .ticker-item {
+            display: inline-block;
+            padding: 0 100px;
+            font-weight: 500;
+        }
+
+        @keyframes scrollRTL {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
         .hero {
+            margin-top: 200px;
             text-align: center;
             padding: 150px 20px 100px;
             background: url('images/bostalsee.png') no-repeat center center/cover;
@@ -119,12 +154,11 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        .hero .arabic-title {
-            font-size: 3em;
-            direction: rtl;
+        .hero-logo {
+            width: 200px;
+            height: auto;
             margin-bottom: 30px;
-            font-weight: 300;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
         }
 
         .hero p {
@@ -161,21 +195,6 @@
             margin-bottom: 40px;
             color: #2E7D32;
             font-weight: 700;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transition: all 0.3s;
         }
 
         .carousel {
@@ -269,7 +288,7 @@
         }
 
         .buttons a i, .buttons button i {
-            margin-right: 10px;
+            margin-left: 10px;
         }
 
         footer {
@@ -287,15 +306,12 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #2E7D32, #000000);
         }
 
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5em;
-            }
-            .hero .arabic-title {
-                font-size: 2em;
             }
             .hero p {
                 font-size: 1.2em;
@@ -303,106 +319,69 @@
             .section h2 {
                 font-size: 2em;
             }
-            .gallery {
-                grid-template-columns: 1fr;
+            .carousel {
+                height: 300px;
             }
             .buttons {
                 flex-direction: column;
                 align-items: center;
             }
         }
-
-        .news-ticker {
-            background: linear-gradient(90deg, #2E7D32, #000000);
-            color: white;
-            padding: 15px 0;
-            position: fixed;
-            top: 140px; /* Adjust based on header height */
-            width: 100%;
-            z-index: 999;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            font-size: 1.2em;
-        }
-
-        .news-ticker .ticker-content {
-            display: flex;
-            white-space: nowrap;
-            animation: scrollRTL 15s linear infinite;
-        }
-
-        .news-ticker .ticker-item {
-            display: inline-block;
-            padding: 0 100px;
-            font-weight: 500;
-        }
-
-        @keyframes scrollRTL {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .hero {
-            margin-top: 200px; /* Adjust for fixed header and ticker */
-        }
     </style>
 </head>
 <body>
     <header>
-        <img src="images/Logo.jpg" alt="Logo der Syrischen Gemeinschaft" class="logo">
+        <img src="images/Logo.jpg" alt="شعار تجمع السوريين" class="logo">
         <nav>
-            <a href="#home">Start</a>
-            <a href="ueber_uns.html">Über uns</a>
-            <a href="#kontakt">Kontakt</a>
-            <a href="#galerie">Galerie</a>
-            <a href="index_ar.html">العربية</a>
+            <a href="#home">الرئيسية</a>
+            <a href="ueber_uns.html">عننا</a>
+            <a href="#kontakt">اتصال</a>
+            <a href="#galerie">معرض</a>
+            <a href="index.html">Deutsch</a>
         </nav>
     </header>
 
     <div class="news-ticker">
         <div class="ticker-content">
-            <div class="ticker-item">Erwarten Sie die offizielle Eröffnung</div>
+            <div class="ticker-item">ترقبوا الأفتتاح الرسمي</div>
         </div>
     </div>
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <img src="images/Logo.jpg" alt="Logo der Syrischen Gemeinschaft" class="hero-logo">
-            <h1>Syrische Gemeinschaft im Saarland</h1>
-            <p>Herzlich willkommen bei der Syrischen Gemeinschaft im Saarland!</p>
+            <img src="images/Logo.jpg" alt="شعار تجمع السوريين" class="hero-logo">
+            <h1>تجمع السوريين في زارلاند</h1>
+            <p>مرحباً بكم في تجمع السوريين في زارلاند!</p>
         </div>
     </section>
 
     <section class="section">
+        <h2>اكتشفوا زارلاند</h2>
         <div class="carousel">
             <div class="carousel-inner" id="carousel-inner">
                 <div class="slide">
-                    <img src="images/bostalsee.png" alt="Bostalsee">
-                    <div class="caption">Bostalsee - Ein wunderschöner See im Saarland</div>
+                    <img src="images/bostalsee.png" alt="بحيرة بوستال">
+                    <div class="caption">بحيرة بوستال - بحيرة جميلة في زارلاند</div>
                 </div>
                 <div class="slide">
-                    <img src="images/ludwigskirche.png" alt="Ludwigskirche">
-                    <div class="caption">Ludwigskirche - Historische Kirche in Saarbrücken</div>
+                    <img src="images/ludwigskirche.png" alt="كنيسة لودفيغ">
+                    <div class="caption">كنيسة لودفيغ - كنيسة تاريخية في زاربروكن</div>
                 </div>
                 <div class="slide">
-                    <img src="images/saarbruecker_schloss.png" alt="Saarbrücker Schloss">
-                    <div class="caption">Saarbrücker Schloss - Ein Stück Geschichte</div>
+                    <img src="images/saarbruecker_schloss.png" alt="قصر زاربروكن">
+                    <div class="caption">قصر زاربروكن - قطعة من التاريخ</div>
                 </div>
                 <div class="slide">
-                    <img src="images/saarschleife.png" alt="Saarschleife">
-                    <div class="caption">Saarschleife - Naturschönheit pur</div>
+                    <img src="images/saarschleife.png" alt="ساعرشلايف">
+                    <div class="caption">ساعرشلايف - جمال طبيعي نقي</div>
                 </div>
                 <div class="slide">
-                    <img src="images/saar_polygon.png" alt="Saar Polygon">
-                    <div class="caption">Saar Polygon - Moderne Architektur</div>
+                    <img src="images/saar_polygon.png" alt="مضلع زار">
+                    <div class="caption">مضلع زار - عمارة حديثة</div>
                 </div>
                 <div class="slide">
-                    <img src="images/voelklinger_huette.png" alt="Völklinger Hütte">
-                    <div class="caption">Völklinger Hütte - UNESCO-Weltkulturerbe</div>
+                    <img src="images/voelklinger_huette.png" alt="مصنع فولكلينغر">
+                    <div class="caption">مصنع فولكلينغر - تراث عالمي لليونسكو</div>
                 </div>
             </div>
             <div class="carousel-indicators" id="indicators">
@@ -417,14 +396,14 @@
     </section>
 
     <section class="section buttons">
-        <a href="ueber_uns.html"><i class="fas fa-users"></i> Mehr über uns</a>
-        <button onclick="alert('Kontakt: info@sygs.de')"><i class="fas fa-envelope"></i> Kontakt</button>
-        <button onclick="window.open('https://www.facebook.com', '_blank')"><i class="fab fa-facebook"></i> Facebook</button>
-        <button onclick="window.open('https://www.instagram.com', '_blank')"><i class="fab fa-instagram"></i> Instagram</button>
+        <a href="ueber_uns.html"><i class="fas fa-users"></i> المزيد عننا</a>
+        <button onclick="alert('الاتصال: info@sygs.de')"><i class="fas fa-envelope"></i> اتصال</button>
+        <button onclick="window.open('https://www.facebook.com', '_blank')"><i class="fab fa-facebook"></i> فيسبوك</button>
+        <button onclick="window.open('https://www.instagram.com', '_blank')"><i class="fab fa-instagram"></i> إنستغرام</button>
     </section>
 
     <footer>
-        <p>&copy; 2026 Syrische Gemeinschaft im Saarland. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2026 تجمع السوريين في زارلاند. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script>
@@ -437,7 +416,6 @@
             }
         });
 
-        // Carousel functionality
         const carouselInner = document.getElementById('carousel-inner');
         const indicators = document.querySelectorAll('.indicator');
         let currentSlide = 0;
@@ -455,10 +433,8 @@
             updateCarousel();
         }
 
-        // Auto slide every 3 seconds
         setInterval(nextSlide, 3000);
 
-        // Indicator click
         indicators.forEach(indicator => {
             indicator.addEventListener('click', () => {
                 currentSlide = parseInt(indicator.dataset.slide);
